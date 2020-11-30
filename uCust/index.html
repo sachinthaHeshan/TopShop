@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../css/BS/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Top Shop</title>
+    
+
+  </head>
+  <body>
+    <nav class="navbar fixed-top   navbar-light bg-dark"> <!--fixed-top -->
+
+      <div >
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <a class="navbar-brand" href="#" style="color: rgb(8, 133, 126);font-style:inherit;">
+          <img src="../img/cart (1).png" style="width: 50px;height:50px ;"> TopShop.lk
+        </a>
+      </div>
+
+      <div >
+        <a class="navbar-brand" href="#" style="color: rgb(8, 133, 126);font-style:inherit;">
+          <img src="../img/cart (1).png" style="width: 50px;height:50px ;">
+        </a>
+      </div>
+    </nav> <!--fixed-top -->
+
+ 
+    <nav class="navbar  navbar-light bg-dark"> <!--Search box-->
+      <div class="col-12 float-left" >
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <div class="col-12 float-left" role="group" >
+         <div class="input-group mb-3 col-12 col-sm-8 col-md-6 col-lg-4 col-xg-1 ">
+            <input type="text" class="form-control bg-dark btn-outline-primary" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2" style="color:cornsilk">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2"><img src="../img/search1.png" alt="Search" style="width: 20px;height: 20;"></button>
+            </div>
+         </div>
+    </nav> <!--Search box-->
+
+
+    <div id="mySidenav" class="sidenav">
+      <div id="mm">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <center>
+          <img src="../img/logo.png" href="#"  >
+        </center>
+  
+        <a href="#">
+        <img src="../img/cart (1).png" style="  width: 30px;height: 30px;">
+          <button type="button" class="btn btn-lg btn-outline-primary">
+             My Orders
+          </button>
+        </a>
+  
+        <a href="#">
+          <button type="button" class="btn btn-lg btn-outline-primary">
+            <img src="../img/cart (1).png" style="  width: 30px;height: 30px;"> My Orders
+          </button>
+        </a>
+        <a href="#">
+           <button type="button" class="btn btn-lg btn-outline-primary">
+             <img src="../img/cart (1).png" style="  width: 30px;height: 30px;"> My Orders
+           </button>
+        </a>
+        <a href="#">
+           <button type="button" class="btn btn-lg btn-outline-primary">
+             <img src="../img/cart (1).png" style="  width: 30px;height: 30px;"> My Orders
+           </button>
+        </a>
+        <a href="#">
+           <button type="button" class="btn btn-lg btn-outline-primary">
+             <img src="../img/cart (1).png" style="  width: 30px;height: 30px;"> My Orders
+           </button>
+        </a>
+     </div>
+   </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mm").style.display= none;
+
+}
+</script>
+   
+
+
+    <div class="container">
+    <br>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4 sm-6 ">
+          <div class="card h-100">
+            <img src="../img/1.jpg" class="card-img-top setSize" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sun light</h5>
+              <span style="font-size:25px;font-family:Arial;color: darkcyan;"> Pice Rs.50.00</span><br>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <center>
+                <input type="button" class="btn btn-info" value="ADD TO CART">
+                &nbsp;
+                <input type="button" class="btn btn-warning" value="BUY NOW">
+              </center>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 sm-6">
+          <div class="card h-100">
+            <img src="../img/2.png" class="card-img-top setSize" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+              <center>
+                <input type="button" class="btn btn-info" value="ADD TO CART">
+                &nbsp;
+                <input type="button" class="btn btn-warning" value="BUY NOW">
+              </center>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 sm-6">
+          <div class="card h-100">
+            <img src="../img/3.webp" class="card-img-top setSize" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              <center>
+                <input type="button" class="btn btn-info" value="ADD TO CART">
+                &nbsp;
+                <input type="button" class="btn btn-warning" value="BUY NOW">
+              </center>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 sm-6">
+          <div class="card h-100">
+            <img src="../img/4.jpg" class="card-img-top setSize" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <center>
+                <input type="button" class="btn btn-info" value="ADD TO CART">
+                &nbsp;
+                <input type="button" class="btn btn-warning" value="BUY NOW">
+              </center>
+            </div>
+          </div>
+        </div>
+   
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/5.png" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/6.webp" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/7.webp" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/8.jpg" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/9.png" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/10.jpg" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col mb-4 ">
+        <div class="card h-100">
+          <img src="../img/11.jpg" class="card-img-top setSize" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+   
+  </body>
+</html>
