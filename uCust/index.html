@@ -15,22 +15,24 @@
   <body>
     <nav class="navbar fixed-top   navbar-light bg-dark"> <!--fixed-top -->
 
-      <div >
+      <div ><!--logo and brandName-->
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <a class="navbar-brand" href="#" style="color: rgb(8, 133, 126);font-style:inherit;">
           <img src="../img/cart (1).png" style="width: 50px;height:50px ;"> TopShop.lk
         </a>
-      </div>
+      </div><!--/logo and brandName-->
 
-      <div >
-        <a class="navbar-brand" href="#" style="color: rgb(8, 133, 126);font-style:inherit;">
-          <img src="../img/cart (1).png" style="width: 50px;height:50px ;">
+      <div style="position: relative;text-align: center;color: white;"><!--cart icon-->
+        <a class="navbar-brand" href="cart/" style="color: rgb(8, 133, 126);font-style:inherit;">
+          <img src="../img/cart (2).png" style="width: 50px;height:50px ;">
+          <div style="position: absolute; top: 42%; left: 40%; transform: translate(-50%, -50%);font-size: 15px;color: black;">122</div>
         </a>
-      </div>
-    </nav> <!--fixed-top -->
+      </div><!--/cart icon-->
+
+    </nav> <!--/fixed-top -->
 
  
-    <nav class="navbar  navbar-light bg-dark"> <!--Search box-->
+    <nav class="navbar  navbar-light bg-dark"> <!--Search box bar-->
       <div class="col-12 float-left" >
         <br>
         <br>
@@ -44,11 +46,12 @@
               <button class="btn btn-outline-primary" type="button" id="button-addon2"><img src="../img/search1.png" alt="Search" style="width: 20px;height: 20;"></button>
             </div>
          </div>
-    </nav> <!--Search box-->
+    </nav> <!--/Search box bar-->
 
 
     <div id="mySidenav" class="sidenav">
-      <div id="mm">
+    
+      <div id="dis">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
         <center>
@@ -82,46 +85,69 @@
              <img src="../img/cart (1).png" style="  width: 30px;height: 30px;"> My Orders
            </button>
         </a>
-     </div>
+       </div>
    </div>
 
 <script>
 function openNav() {
+
   document.getElementById("mySidenav").style.width = "250px";
-  
+   document.getElementById("dis").style.display="inline";
 }
 
 function closeNav() {
+   document.getElementById("dis").style.display="none";
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("mm").style.display= none;
 
 }
+
 </script>
    
 
+<!------------------------------------ Contain ----------------------------------------->
 
     <div class="container">
-    <br>
+    <br/>
+
+
+
       <div class="row row-cols-1 row-cols-md-3">
+
+
+       
+
         <div class="col mb-4 sm-6 ">
+
           <div class="card h-100">
-            <img src="../img/1.jpg" class="card-img-top setSize" alt="...">
+            <a href="product.html" class="nounderline"> 
+            <img src="../img/1.jpg" class="card-img-top img-fluid img-thumbnail  setSize" alt="...">
             <div class="card-body">
               <h5 class="card-title">Sun light</h5>
               <span style="font-size:25px;font-family:Arial;color: darkcyan;"> Pice Rs.50.00</span><br>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <center>
-                <input type="button" class="btn btn-info" value="ADD TO CART">
-                &nbsp;
-                <input type="button" class="btn btn-warning" value="BUY NOW">
-              </center>
+              
+              
+
             </div>
+             </a>
+            <center>
+              <input type="button" class="btn btn-info" value="ADD TO CART">
+              &nbsp;
+              <input type="button" class="btn btn-warning" value="BUY NOW">
+            </center>
+            <br/>
           </div>
+
         </div>
+
+
+  
+
+      
 
         <div class="col mb-4 sm-6">
           <div class="card h-100">
-            <img src="../img/2.png" class="card-img-top setSize" alt="...">
+            <img src="../img/2.png" class="card-img-top img-fluid img-thumbnail setSize" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a short card.</p>
@@ -136,7 +162,7 @@ function closeNav() {
 
         <div class="col mb-4 sm-6">
           <div class="card h-100">
-            <img src="../img/3.webp" class="card-img-top setSize" alt="...">
+            <img src="../img/3.webp" class="card-img-top  img-fluid img-thumbnail setSize" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -151,7 +177,7 @@ function closeNav() {
 
         <div class="col mb-4 sm-6">
           <div class="card h-100">
-            <img src="../img/4.jpg" class="card-img-top setSize" alt="...">
+            <img src="../img/4.jpg" class="card-img-top img-fluid img-thumbnail setSize" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -167,7 +193,7 @@ function closeNav() {
 
       <div class="col mb-4 ">
         <div class="card h-100">
-          <img src="../img/5.png" class="card-img-top setSize" alt="...">
+          <img src="../img/5.png" class="card-img-top img-fluid img-thumbnail setSize" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -182,7 +208,7 @@ function closeNav() {
 
       <div class="col mb-4 ">
         <div class="card h-100">
-          <img src="../img/6.webp" class="card-img-top setSize" alt="...">
+          <img src="../img/6.webp" class="card-img-top img-fluid img-thumbnail setSize" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

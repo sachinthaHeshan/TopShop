@@ -53,3 +53,26 @@ body {
   /* width: 300px;
   height: 300px;*/
 }
+/*
+.containers {
+  width: 600px;
+  margin: 0 auto;
+}
+*/
+/*
+#canvas {
+  width: 600px;
+  height: 400px;
+  border: 1px solid #aaa;
+  cursor: default;
+}
+*/
+canvas {
+  background-color: blue; 
+  width: 100%;
+  height: auto;
+}
+/*
+img {
+  max-width: 100%;
+}*/
