@@ -14,6 +14,6 @@
 
   </head>
   <body>
-<h1>index main page<h1>
+<h1>index main page</h1>
   </body>
 </html>
