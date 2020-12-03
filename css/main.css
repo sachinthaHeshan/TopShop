@@ -68,10 +68,11 @@ body {
 }
 */
 canvas {
-  background-color: blue; 
-  width: 100%;
+  background-color: gray; 
+width: 90%;
   height: auto;
 }
+
 /*
 img {
   max-width: 100%;

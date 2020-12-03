@@ -27,19 +27,21 @@ $(document).ready(function(){
 
 						// instantiate cropper
 						var cropper = $canvas.cropper({
-							aspectRatio: 16 / 9
+							aspectRatio: 1
+
 						});
 					};
 					img.src = e.target.result;
-				};
 
+				};
 				$('#crop').click(function(){
 					jQuery('#result').html('');
 					var croppedImage = $canvas.cropper('getCroppedCanvas').toDataURL('image/jpg');
-					$('#result').append($('<img>').attr('src', croppedImage));
+					$('#result').append($('<img>').attr('src', croppedImage).attr('width', '200px'));
 					$('#cropped_img').attr('value',croppedImage);
 					$('#upload_img').removeAttr('disabled');
 				});
+
 
 				// reading the selected file
 				reader.readAsDataURL(this.files[0]);

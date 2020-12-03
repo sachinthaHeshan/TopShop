@@ -21,7 +21,13 @@
 
 
     <title>Top Shop</title>
-    
+
+<!----Catch Data----->
+<?php
+$pro_name=$_POST['pro_name'];
+$Email=$_POST['Email'];
+?>
+<!----/Catch Data----->
 
   </head>
   <body>
@@ -104,23 +110,6 @@ function closeNav() {
 
 
 
-<div class="row"> 
-
- <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 ">
-      <img src="img/1.jpg" class="mx-auto d-block img-fluid border border-primary rounded">
-    </div>
-  <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-      <img src="img/1.jpg" class="mx-auto d-block img-fluid border border-primary rounded">
-    </div>
-    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-      <img src="img/1.jpg" class="mx-auto d-block img-fluid border border-primary rounded">
-    </div>
-    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-      <img src="img/1.jpg" class="mx-auto d-block img-fluid border border-primary rounded">
-    </div>
-
-  </div>
-
 
 <!-- Image Upload ---->
 
@@ -129,18 +118,18 @@ function closeNav() {
     <h2>1. Select File</h2>
     <div class="form">    
         <input type="file" name="img_file" id="img_file">
-        <button id="crop">Crop</button>
+      
     </div>
     
     <h2>2. Crop</h2>
-    <div>
-      <canvas id="canvas">
+    <div  >
+      <canvas id="canvas" >
         Your browser does not support HTML5 Canvas
       </canvas>
     </div>
-    
+      <button id="crop">Crop</button>
     <h2>3. Result</h2>
-    <div id="result">
+    <div id="result"  ><!-- style="display: none;" ---->
       
     </div>
 
@@ -148,17 +137,20 @@ function closeNav() {
 <form action="upload-img.php" method="POST">
       <input type="hidden" name="file_name" id="file_name">
       <input type="hidden" name="cropped_img" id="cropped_img">
-     
-   
+
+      <?php //attach email and pro_name
+      echo("<input type='hidden' name='Email' value='".$Email."'>"); 
+      echo("<input type='hidden' name='pro_name' value='".$pro_name."'>"); 
+      // -/attach email and pro_name
+?>
+
+
 <!-- /Image Upload ---->
-
-
-
 <br>
 
   <div class="form-group row"><!-- SUBMIT BUTTON -->
     <div class="col-sm-10">
-       <button type="submit" class="btn btn-primary" id="upload_img" name="upload_img" disabled>Add Product</button>
+       <button type="submit" class="btn btn-primary" id="upload_img" name="upload_img" disabled>Upload</button>
     
     </div>
   </div><!-- /SUBMIT BUTTON -->

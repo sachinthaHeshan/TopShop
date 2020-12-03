@@ -36,6 +36,35 @@
      <!----/Connect Database----->
 
 
+ <!----Get User config----->
+<?php
+$Email='fake123@fake.com';
+
+?>
+ <!----/Get User config----->
+
+
+ <!----/Upload index.php data to database----->
+<?php 
+
+if(isset($_POST['next'])){
+
+
+ // echo "connection successful<br>";
+  
+  $SQL="INSERT INTO product (Email,Name,price,weight) VALUES('".$Email."','".$_POST['pro_name']."',".$_POST['pro_price'].",".$_POST['pro_weight'].");";
+
+if($conn->query($SQL)==true){
+// echo "insert successful<br>";
+}
+else{
+   echo "error insert";
+}
+}
+?>
+ <!----/Upload index.php data to database----->
+
+
   </head>
 
 
@@ -119,6 +148,9 @@ function closeNav() {
 <h3>Add product</h3>
    <br/>
 
+<h4>Images</h4>
+   <br/>
+
 
 
 <div class="row"> 
@@ -126,38 +158,40 @@ function closeNav() {
 
 <?php 
 
-/* Last work
+//--get num_of_images
+$num_of_images=0;
 
-  $SQL="SELECT img_count FROM product WHERE Reg_no='$reg_no' and sport.sp_id=student.sp_id;";
+  $SQL="SELECT num_of_images FROM product WHERE Email='".$Email."' AND Name='".$_POST['pro_name']."';";
   $result=$conn->query($SQL);
   if($result->num_rows>0){
     while($row=$result->fetch_assoc()){
       
-      echo $row['name'];
+     $num_of_images= $row['num_of_images'];
     }
     
   }
-*/
-
-
-  $img=0;
+//-/get num_of_images
+echo($num_of_images);
+  
   $count=1;
-  while($count<=$img){
+  echo('&nbsp;');
+  while($count<=$num_of_images){
 
     echo("<div class='card' style='width: 5rem;'>");
     echo("<img src='img/1.jpg' class='card-img-top border border-secondary'>");
     echo("<p class='text-center'>image ".$count."</p></div>&nbsp;");
     $count++;
   }
- 
-  if($img<4){
-      echo("<div class='card' style='width: 5rem;'>");
-    echo("<a href='#' '><img src='img/add.jpg' class='card-img-top border border-secondary'></a>");
-    echo("<p class='text-center'>Add image</p></div>");
-  }
   echo("</div>");
+  if($num_of_images<4){
+echo("<br><form action='crop.php' method='POST'>");
+echo ("<input type='hidden' name='Email' value='".$Email."'>");
+echo ("<input type='hidden' name='pro_name' value='".$_POST['pro_name']."'>");
+     echo("<input type='submit' class='btn btn-secondary' value='Add image' name='add'>");
+    echo('</from>');
+  }
+ 
  ?>
-
 
 
 
@@ -171,7 +205,7 @@ function closeNav() {
   </div><!-- /SUBMIT BUTTON -->
 
 
-</form>
+
 
     </div><!------------------------------------ /Contain ----------------------------------------->
 
@@ -180,21 +214,5 @@ function closeNav() {
 </html>
 
 
-<?php //Upload index.php data to database
 
-if(isset($_POST['next'])){
-
-
- // echo "connection successful<br>";
-  
-  $SQL="INSERT INTO product (Name,price,weight) VALUES('".$_POST['pro_name']."',".$_POST['pro_price'].",".$_POST['pro_weight'].");";
-
-if($conn->query($SQL)==true){
-// echo "insert successful<br>";
-}
-else{
-   echo "error insert";
-}
-}
-?>
 
